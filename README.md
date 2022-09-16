@@ -96,11 +96,11 @@ list(APPEND CMAKE_FIND_ROOT_PATH ${PROJECT_SOURCE_DIR})
 
 由于这个标定软件没有IMU的数据接口,报错 error: conflicting declaration ‘typedef struct LZ4_streamDecode_t LZ4_streamDecode_t
 所以改写loader.cc的include 加入
-'''sh
+'''
 #include <sensor_msgs/Imu.h>
-'''
+
 并且 建立软链接
-'''
+
 $ sudo mv /usr/include/flann/ext/lz4.h /usr/include/flann/ext/lz4.h.bak
 $ sudo mv /usr/include/flann/ext/lz4hc.h /usr/include/flann/ext/lz4.h.bak
  
